@@ -9,4 +9,5 @@ export declare type themeType = 'light' | 'dark';
 export declare type ThemeContextType = {
   theme: typeof theme.light | typeof theme.dark;
   toggleTheme: () => void;
+  themeMode: themeType;
 };

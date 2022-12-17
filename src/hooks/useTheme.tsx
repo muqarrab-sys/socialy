@@ -5,19 +5,19 @@ import { ThemeContextType, themeType } from 'types/type';
 const ThemeContext = createContext<ThemeContextType>(undefined as unknown as ThemeContextType);
 
 const useThemeValues: () => ThemeContextType = () => {
-  const [type, setType] = React.useState<themeType>('light');
+  const [themeMode, setThemeMode] = React.useState<themeType>('light');
 
   const theme = React.useMemo(
     () => ({
-      type,
-      ...definedThemes[type as themeType],
+      type: themeMode,
+      ...definedThemes[themeMode as themeType],
     }),
-    [type],
+    [themeMode],
   );
 
-  const toggleTheme = () => setType(type === 'light' ? 'dark' : 'light');
+  const toggleTheme = () => setThemeMode(themeMode === 'light' ? 'dark' : 'light');
 
-  return { toggleTheme, theme };
+  return { toggleTheme, theme, themeMode };
 };
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
