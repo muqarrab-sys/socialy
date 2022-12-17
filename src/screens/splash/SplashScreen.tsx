@@ -1,26 +1,24 @@
-import { View, StyleSheet } from 'react-native';
-import React from 'react';
-import { useEffect } from 'react';
+import { Screen, Text } from 'components/common';
+import React, { useEffect } from 'react';
+import { StyleSheet } from 'react-native';
 import { SplashScreenProps } from 'types/navigation';
-import { Text } from 'components/common';
 
 const SplashScreen: React.FC<SplashScreenProps> = ({ navigation }) => {
   useEffect(() => {
     setTimeout(() => {
-      navigation.navigate('HomeScreen');
+      navigation.navigate('BottomNav');
     }, 2000);
   }, []);
 
   return (
-    <View style={styles.container}>
+    <Screen style={styles.container}>
       <Text>Splash</Text>
-    </View>
+    </Screen>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
   },

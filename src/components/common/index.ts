@@ -1,3 +1,3 @@
 import Text from './text/Text';
-
-export { Text };
+import Screen from './screen/Screen';
+export { Text, Screen };
