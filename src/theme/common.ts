@@ -1,15 +1,19 @@
 export default {
-  fontWeights: {
-    100: 'SF UI Display Ultralight',
-    200: 'SF UI Display Thin',
-    300: 'SF UI Display Light',
-    400: 'SF UI Display Regular',
-    500: 'SF UI Display Medium',
-    600: 'SF UI Display Semibold',
-    700: 'SF UI Display Bold',
-    800: 'SF UI Display Heavy',
-    900: 'SF UI Display Black',
-    bold: 'SF UI Display Bold',
-    normal: 'SF UI Display Regular',
+  metrics: {
+    baseMargin: 10,
+    basePadding: 20,
+    baseRadius: 3,
   },
+
+  fontSizes: {
+    h1: 26,
+    h2: 20,
+    h3: 18,
+    input: 16,
+    regular: 14,
+    medium: 12,
+    small: 11,
+  },
+
+  headerHeight: 54,
 };
