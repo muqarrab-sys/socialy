@@ -1,0 +1,70 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "My first post",
+      "body": "This is my first post",
+      "created_at": "2014-01-01T00:00:00.000Z",
+      "updated_at": "2014-01-01T00:00:00.000Z",
+      "user": {
+        "id": 1,
+        "name": "John Doe",
+        "avatar": "https://unsplash.it/200/200"
+      },
+      "media": [
+        {
+          "id": 1,
+          "type": "image",
+          "url": "https://unsplash.it/400/400",
+          "width": 400,
+          "height": 400,
+          "created_at": "2014-01-01T00:00:00.000Z",
+          "updated_at": "2014-01-01T00:00:00.000Z"
+        }
+      ],
+      "comments": [
+        {
+          "id": 1,
+          "body": "This is a comment",
+          "created_at": "2014-01-01T00:00:00.000Z",
+          "updated_at": "2014-01-01T00:00:00.000Z",
+          "user_id": 1,
+          "post_id": 1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "My second post",
+      "body": "This is my second post",
+      "created_at": "2014-01-01T00:00:00.000Z",
+      "updated_at": "2014-01-01T00:00:00.000Z",
+      "user": {
+        "id": 1,
+        "name": "John Doe",
+        "avatar": "https://unsplash.it/200/200"
+      },
+      "media": [
+        {
+          "id": 1,
+          "type": "image",
+          "url": "https://unsplash.it/400/300",
+          "width": 400,
+          "height": 300,
+          "created_at": "2014-01-01T00:00:00.000Z",
+          "updated_at": "2014-01-01T00:00:00.000Z"
+        }
+      ],
+      "comments": [
+        {
+          "id": 2,
+          "body": "This is another comment",
+          "created_at": "2014-01-01T00:00:00.000Z",
+          "updated_at": "2014-01-01T00:00:00.000Z",
+          "user_id": 1,
+          "post_id": 2
+        }
+      ]
+    }
+  ]
+}

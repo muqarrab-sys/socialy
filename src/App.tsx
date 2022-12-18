@@ -1,17 +1,14 @@
-import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { ThemeProvider } from 'hooks';
+import { useTheme } from 'hooks';
+import React, { useEffect } from 'react';
+import { StatusBar } from 'react-native';
 import { RootStack } from './navigation';
 
 export default function App() {
-  return (
-    <SafeAreaProvider>
-      <ThemeProvider>
-        <NavigationContainer>
-          <RootStack />
-        </NavigationContainer>
-      </ThemeProvider>
-    </SafeAreaProvider>
-  );
+  const { themeMode } = useTheme();
+
+  useEffect(() => {
+    StatusBar.setBarStyle(themeMode === 'dark' ? 'light-content' : 'dark-content', true);
+  }, [themeMode]);
+
+  return <RootStack />;
 }

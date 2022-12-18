@@ -1,3 +1,5 @@
+import { Dimensions } from 'react-native';
+
 export default {
   metrics: {
     baseMargin: 10,
@@ -16,4 +18,17 @@ export default {
   },
 
   headerHeight: 54,
+  tabBarHeight: 49,
+  statusBarHeight: 20,
+
+  screen: {
+    paddingHorizontal: 10,
+  },
+
+  list: {
+    distanceBetweenItems: 10,
+  },
+
+  screenWidth: Dimensions.get('window'),
+  screenHeight: Dimensions.get('window'),
 };
